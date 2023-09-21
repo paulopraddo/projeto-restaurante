@@ -1,4 +1,4 @@
-package com.paulo.praddo.projetorestaurante;
+package com.paulo.praddo.projeto_hamburgueria;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

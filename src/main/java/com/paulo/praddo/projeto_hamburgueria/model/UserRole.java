@@ -1,4 +1,4 @@
-package com.paulo.praddo.projetorestaurante.model;
+package com.paulo.praddo.projeto_hamburgueria.model;
 
 public enum UserRole {
 

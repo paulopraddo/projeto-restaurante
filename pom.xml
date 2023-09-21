@@ -11,7 +11,7 @@
 	<groupId>com.paulo.praddo</groupId>
 	<artifactId>projeto-restaurante</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>projeto-restaurante</name>
+	<name>projeto-hamburgueria</name>
 	<description>Projeto de gerenciamento de pedidos de um Restaurante</description>
 	<properties>
 		<java.version>17</java.version>

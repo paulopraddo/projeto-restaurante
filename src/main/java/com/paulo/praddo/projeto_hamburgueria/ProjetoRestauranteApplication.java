@@ -1,4 +1,4 @@
-package com.paulo.praddo.projetorestaurante;
+package com.paulo.praddo.projeto_hamburgueria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

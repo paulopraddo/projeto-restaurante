@@ -1,11 +1,11 @@
-package com.paulo.praddo.projetorestaurante.controller;
+package com.paulo.praddo.projeto_hamburgueria.controller;
 
-import com.paulo.praddo.projetorestaurante.model.AuthenticationDTO;
-import com.paulo.praddo.projetorestaurante.model.LoginResponseDTO;
-import com.paulo.praddo.projetorestaurante.model.RegisterDTO;
-import com.paulo.praddo.projetorestaurante.model.User;
-import com.paulo.praddo.projetorestaurante.repository.UserRepository;
-import com.paulo.praddo.projetorestaurante.service.TokenService;
+import com.paulo.praddo.projeto_hamburgueria.model.AuthenticationDTO;
+import com.paulo.praddo.projeto_hamburgueria.model.LoginResponseDTO;
+import com.paulo.praddo.projeto_hamburgueria.model.RegisterDTO;
+import com.paulo.praddo.projeto_hamburgueria.model.User;
+import com.paulo.praddo.projeto_hamburgueria.repository.UserRepository;
+import com.paulo.praddo.projeto_hamburgueria.service.TokenService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

@@ -1,4 +1,4 @@
-package com.paulo.praddo.projetorestaurante.model;
+package com.paulo.praddo.projeto_hamburgueria.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

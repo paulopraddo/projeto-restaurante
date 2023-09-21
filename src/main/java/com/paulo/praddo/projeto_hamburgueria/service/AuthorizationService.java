@@ -1,6 +1,6 @@
-package com.paulo.praddo.projetorestaurante.service;
+package com.paulo.praddo.projeto_hamburgueria.service;
 
-import com.paulo.praddo.projetorestaurante.repository.UserRepository;
+import com.paulo.praddo.projeto_hamburgueria.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

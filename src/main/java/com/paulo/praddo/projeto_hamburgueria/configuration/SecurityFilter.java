@@ -1,8 +1,7 @@
-package com.paulo.praddo.projetorestaurante.configuration;
+package com.paulo.praddo.projeto_hamburgueria.configuration;
 
-import com.paulo.praddo.projetorestaurante.model.User;
-import com.paulo.praddo.projetorestaurante.repository.UserRepository;
-import com.paulo.praddo.projetorestaurante.service.TokenService;
+import com.paulo.praddo.projeto_hamburgueria.repository.UserRepository;
+import com.paulo.praddo.projeto_hamburgueria.service.TokenService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

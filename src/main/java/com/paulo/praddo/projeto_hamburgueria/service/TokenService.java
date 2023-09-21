@@ -1,15 +1,14 @@
-package com.paulo.praddo.projetorestaurante.service;
+package com.paulo.praddo.projeto_hamburgueria.service;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTCreationException;
 import com.auth0.jwt.exceptions.JWTVerificationException;
-import com.paulo.praddo.projetorestaurante.model.User;
+import com.paulo.praddo.projeto_hamburgueria.model.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 

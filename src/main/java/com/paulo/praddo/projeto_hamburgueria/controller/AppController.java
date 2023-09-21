@@ -1,4 +1,4 @@
-package com.paulo.praddo.projetorestaurante.controller;
+package com.paulo.praddo.projeto_hamburgueria.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
