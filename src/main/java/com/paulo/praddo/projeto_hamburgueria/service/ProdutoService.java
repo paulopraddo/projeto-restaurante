@@ -13,11 +13,20 @@ public class ProdutoService {
     @Autowired
     ProdutoRepository produtoRepository;
 
+    //OK
     public ResponseEntity salvarNovoProduto(ProdutoDTO produtoDTO) {
         Produto produto = new Produto(produtoDTO);
         produtoRepository.save(produto);
 
         return ResponseEntity.ok().build();
+    }
+
+    public ResponseEntity exibirProdutoPeloId(Long idProduto) {
+        return ResponseEntity.ok(produtoRepository.findById(idProduto));
+    }
+
+    public ResponseEntity exibirTodosOsProdutos() {
+        return ResponseEntity.ok(produtoRepository.findAll());
     }
 
 }
