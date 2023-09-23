@@ -31,5 +31,10 @@ public interface ProdutoRepository extends JpaRepository<Produto, Long> {
     @Transactional
     @Query(value = "UPDATE PRODUTO SET TIPO = :tipo WHERE id = :id", nativeQuery = true)
     void atualizarTipoProduto(@Param("id") Long id, @Param("tipo") String tipoProduto);
+
+
+    @Query(value = "SELECT p FROM Produto p WHERE p.nome = :nome")
+    Produto procuraProdutoPeloNome(@Param("nome") String nome);
+
 }
 

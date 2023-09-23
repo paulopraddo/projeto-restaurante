@@ -52,5 +52,8 @@ public class ProdutoService {
         return ResponseEntity.ok(produtoRepository.findById(idProduto));
     }
 
+    public Produto procuraProdutoPeloNome(String nome) {
+       return produtoRepository.procuraProdutoPeloNome(nome);
+    }
 
 }

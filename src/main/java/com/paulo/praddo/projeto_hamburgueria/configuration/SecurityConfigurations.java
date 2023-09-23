@@ -29,7 +29,14 @@ public class SecurityConfigurations {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
-                        .requestMatchers(HttpMethod.GET,"/").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET,"/").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/salvarNovoProduto").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT,
+                                "/alterarNome/id/{id}/nome/{newNome}",
+                                "/alterarDesc/id/{id}/desc/{newDesc}",
+                                "/alterarPreco/id/{id}/preco/{newPreco}",
+                                "/alterarTipo/id/{id}/tipo/{newId}"
+                        ).hasRole("ADMIN")
                         .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
