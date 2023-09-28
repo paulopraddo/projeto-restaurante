@@ -1,7 +1,7 @@
 package com.paulo.praddo.projeto_hamburgueria.controller;
 
 import com.paulo.praddo.projeto_hamburgueria.model.ProdutoDTO;
-import com.paulo.praddo.projeto_hamburgueria.model.TipoProduto;
+import com.paulo.praddo.projeto_hamburgueria.entity.TipoProduto;
 import com.paulo.praddo.projeto_hamburgueria.service.ComprasService;
 import com.paulo.praddo.projeto_hamburgueria.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;

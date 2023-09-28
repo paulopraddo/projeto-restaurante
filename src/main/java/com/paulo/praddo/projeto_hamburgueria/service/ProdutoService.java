@@ -1,8 +1,8 @@
 package com.paulo.praddo.projeto_hamburgueria.service;
 
-import com.paulo.praddo.projeto_hamburgueria.model.Produto;
+import com.paulo.praddo.projeto_hamburgueria.entity.Produto;
 import com.paulo.praddo.projeto_hamburgueria.model.ProdutoDTO;
-import com.paulo.praddo.projeto_hamburgueria.model.TipoProduto;
+import com.paulo.praddo.projeto_hamburgueria.entity.TipoProduto;
 import com.paulo.praddo.projeto_hamburgueria.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

@@ -1,7 +1,6 @@
 package com.paulo.praddo.projeto_hamburgueria.repository;
 
-import com.paulo.praddo.projeto_hamburgueria.model.Produto;
-import com.paulo.praddo.projeto_hamburgueria.model.TipoProduto;
+import com.paulo.praddo.projeto_hamburgueria.entity.Produto;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

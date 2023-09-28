@@ -1,4 +1,4 @@
-package com.paulo.praddo.projeto_hamburgueria.model;
+package com.paulo.praddo.projeto_hamburgueria.entity;
 
 public enum TipoProduto {
     HAMBURGUER,
