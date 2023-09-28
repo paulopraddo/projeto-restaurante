@@ -28,4 +28,13 @@ public class ComprasController {
         return comprasService.verItensDoCarrinho();
     }
 
+    @PostMapping("/finalizarPedido")
+    public ResponseEntity finalizarPedido() {
+        return comprasService.realizarPedido();
+    }
+
+    @PutMapping("/concluirPedido/{idPedido}")
+    public ResponseEntity concluirPedido(@PathVariable Long idPedido) {
+        return comprasService.pedidoConcluido(idPedido);
+    }
 }
