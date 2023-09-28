@@ -1,18 +1,24 @@
 package com.paulo.praddo.projeto_hamburgueria.service;
 
 import com.paulo.praddo.projeto_hamburgueria.entity.Produto;
+import com.paulo.praddo.projeto_hamburgueria.model.ProdutoDATA;
 import com.paulo.praddo.projeto_hamburgueria.model.ProdutoDTO;
 import com.paulo.praddo.projeto_hamburgueria.entity.TipoProduto;
+import com.paulo.praddo.projeto_hamburgueria.model.Response;
 import com.paulo.praddo.projeto_hamburgueria.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
 
 @Service
 public class ProdutoService {
 
     @Autowired
     ProdutoRepository produtoRepository;
+
+    Response response = new Response();
 
     //OK
     public ResponseEntity salvarNovoProduto(ProdutoDTO produtoDTO) {
@@ -23,13 +29,19 @@ public class ProdutoService {
     }
 
     //OK
-    public ResponseEntity exibirProdutoPeloId(Long idProduto) {
-        return ResponseEntity.ok(produtoRepository.findById(idProduto));
+    public ProdutoDATA exibirProdutoPeloId(Long idProduto) {
+        return response.converter(produtoRepository.findById(idProduto).orElse(null));
     }
 
     //OK
-    public ResponseEntity exibirTodosOsProdutos() {
-        return ResponseEntity.ok(produtoRepository.findAll());
+    public ArrayList<ProdutoDATA> exibirTodosOsProdutos() {
+        ArrayList<ProdutoDATA> listaProdutos = new ArrayList<ProdutoDATA>();
+
+        for (Produto produto:
+             produtoRepository.findAll()) {
+            listaProdutos.add(response.converter(produto));
+        }
+        return listaProdutos;
     }
 
     public ResponseEntity alterarNomeProduto(Long idProduto, String newNome) {

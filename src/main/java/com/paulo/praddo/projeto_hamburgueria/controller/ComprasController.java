@@ -1,14 +1,18 @@
 package com.paulo.praddo.projeto_hamburgueria.controller;
 
+
+import com.paulo.praddo.projeto_hamburgueria.model.ProdutoDATA;
 import com.paulo.praddo.projeto_hamburgueria.service.ComprasService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/compras")
 public class ComprasController {
+
 
     @Autowired
     ComprasService comprasService;
@@ -20,7 +24,8 @@ public class ComprasController {
     }
 
     @GetMapping("/exibirCarrinho")
-    public ResponseEntity exibirCarrinho() {
+    public ArrayList<ProdutoDATA> exibirCarrinho() {
         return comprasService.verItensDoCarrinho();
     }
+
 }

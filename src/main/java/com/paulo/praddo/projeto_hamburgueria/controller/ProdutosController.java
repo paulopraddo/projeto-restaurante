@@ -1,12 +1,14 @@
 package com.paulo.praddo.projeto_hamburgueria.controller;
 
-import com.paulo.praddo.projeto_hamburgueria.model.ProdutoDTO;
 import com.paulo.praddo.projeto_hamburgueria.entity.TipoProduto;
-import com.paulo.praddo.projeto_hamburgueria.service.ComprasService;
+import com.paulo.praddo.projeto_hamburgueria.model.ProdutoDATA;
+import com.paulo.praddo.projeto_hamburgueria.model.ProdutoDTO;
 import com.paulo.praddo.projeto_hamburgueria.service.ProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/produtos")
@@ -14,9 +16,6 @@ public class ProdutosController {
 
     @Autowired
     ProdutoService produtoService;
-
-    @Autowired
-    ComprasService comprasService;
 
     @GetMapping
     public String paginaInicial() {
@@ -29,12 +28,12 @@ public class ProdutosController {
     }
 
     @GetMapping("/exibeProduto/id/{idProduto}")
-    public ResponseEntity exibeProdutoPeloId(@PathVariable Long idProduto) {
+    public ProdutoDATA exibeProdutoPeloId(@PathVariable Long idProduto) {
         return this.produtoService.exibirProdutoPeloId(idProduto);
     }
 
     @GetMapping("/exibeTodosOsProdutos")
-    public ResponseEntity exibeTodosOsProdutos() {
+    public ArrayList<ProdutoDATA> exibeTodosOsProdutos() {
         return this.produtoService.exibirTodosOsProdutos();
     }
 
