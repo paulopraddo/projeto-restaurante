@@ -10,6 +10,7 @@ import lombok.*;
 @Getter
 @Setter
 @EqualsAndHashCode(of = "id")
+@Table(name = "pedidos")
 public class Pedido {
 
     @Id
